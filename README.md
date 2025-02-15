@@ -1,5 +1,9 @@
 # Bindicator
 
+## TODO
+
+- Use web scraping to retrieve bin collection days from each council website
+
 ## Attributions
 
 - Contains OS data © Crown copyright and database right 2025
