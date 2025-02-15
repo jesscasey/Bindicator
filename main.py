@@ -1,3 +1,5 @@
+import csv
+
 def find_council(postcode):
     print(f"Finding the local authority for {postcode}...")
     
@@ -8,6 +10,14 @@ def find_council(postcode):
         filename_search = postcode[0]
     else:
         filename_search = postcode[:1]
+
+    with open(f"dataset/pcd_lad_aug_2023_{filename_search}.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row[0] == postcode:
+                print(f"The local authority for {postcode} is {row[2]}.")
+                return
+            print("Postcode not found.")
 
 
 if __name__ == "__main__":
