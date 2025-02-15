@@ -16,9 +16,21 @@ def find_council(postcode):
         for row in reader:
             if row[0] == postcode:
                 print(f"The local authority for {postcode} is {row[2]}.")
-                return
+                next_bin_day(postcode, row[2])
             print("Postcode not found.")
 
+
+def next_bin_day(postcode, council):
+    print(f"Finding the next bin collection day for {postcode}...")
+
+    # Get the web page containing the council's bin collection information.
+    with open("dataset/council_bin_collection_websites.csv", "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row[0] == council:
+                council_website = row[1]
+                return
+        print(f"Bin collection information for {council} could not be found.")
 
 if __name__ == "__main__":
     postcode = input("Please enter your postcode: ")
