@@ -1,7 +1,9 @@
 import csv
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
 
-browser = webdriver.Chrome()
+driver = webdriver.Chrome()
 
 # Return the local authority for the entered postcode.
 def find_council(postcode):
@@ -34,11 +36,28 @@ def next_bin_day(postcode, council):
         reader = csv.reader(file)
         for row in reader:
             if row[0] == council:
-                browser.get(row[1])
+                driver.get(row[1])
+
+                # Enter the postcode into the appropriate field.
+                postcode_input = driver.find_element(By.CSS_SELECTOR, "input[type='text']")
+                postcode_input.send_keys(postcode)
+                postcode_input.submit()
+
+                # At this point the page should return a dropdown menu
+                # containing all addresses associated with the postcode.
+                # The user's house name/number is required to proceed.
+                house_no = input("Please enter your house name or number: ")
+
+                # Search the dropdown menu using the house name/number.
+                house_no_input = Select(driver.find_element(By.TAG_NAME, "select"))
+                for option in house_no_input.options:
+                    if house_no in option.text:
+                        house_no_input.select_by_visible_text(option.text)
+                        house_no_input.submit()
+                print(f"Bin collection information for {house_no} could not be found.")
         print(f"Bin collection information for {council} could not be found.")
 
 
 if __name__ == "__main__":
     postcode = input("Please enter your postcode: ")
-    house_no = input("Please enter your house name or number: ")
     find_council(postcode)
