@@ -1,5 +1,7 @@
 import csv
+from selenium import webdriver
 
+browser = webdriver.Chrome()
 
 # Return the local authority for the entered postcode.
 def find_council(postcode):
@@ -32,8 +34,7 @@ def next_bin_day(postcode, council):
         reader = csv.reader(file)
         for row in reader:
             if row[0] == council:
-                council_website = row[1]
-                return
+                browser.get(row[1])
         print(f"Bin collection information for {council} could not be found.")
 
 
