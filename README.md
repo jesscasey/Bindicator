@@ -1,8 +1,12 @@
 # Bindicator
 
-## TODO
+## Limitations
 
-- Use web scraping to retrieve bin collection days from each council website
+- For licencing reasons, Northern Ireland postcodes and local authorities are not
+included in the dataset. Only those in England, Scotland, and Wales are
+included.
+- Currently, this program only retrieves household waste and recycling
+collection dates. Please check your council's website for further information.
 
 ## Attributions
 
