@@ -71,6 +71,11 @@ def next_bin_day(postcode, council):
                         recycling_date = recycling_element.find_element(
                             By.XPATH, 
                             f"following::td[contains(text(), {datetime.now().year})][1]").text
+                        
+                        # Print the collection dates.
+                        print(f"The next household waste collection date for {postcode} is: {household_date}")
+                        print(f"The next recycling bin collection date for {postcode} is: {recycling_date}")
+                        print(f"For more information, check the council's website: {row[1]}")
                         return
                 print(f"Bin collection information for {house_no} could not be found.")
         print(f"Bin collection information for {council} could not be found.")
