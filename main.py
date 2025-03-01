@@ -39,4 +39,5 @@ def next_bin_day(postcode, council):
 
 if __name__ == "__main__":
     postcode = input("Please enter your postcode: ")
+    house_no = input("Please enter your house name or number: ")
     find_council(postcode)
