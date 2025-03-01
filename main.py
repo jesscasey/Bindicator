@@ -1,4 +1,5 @@
 import csv
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -35,11 +36,12 @@ def next_bin_day(postcode, council):
     with open("dataset/council_bin_collection_websites.csv", "r") as file:
         reader = csv.reader(file)
         for row in reader:
-            if row[0] == council:
+            if council in row[0]:
                 driver.get(row[1])
 
                 # Enter the postcode into the appropriate field.
-                postcode_input = driver.find_element(By.CSS_SELECTOR, "input[type='text']")
+                postcode_input = driver.find_element(By.CSS_SELECTOR, 
+                                                     "input[type='text']")
                 postcode_input.send_keys(postcode)
                 postcode_input.submit()
 
@@ -49,11 +51,27 @@ def next_bin_day(postcode, council):
                 house_no = input("Please enter your house name or number: ")
 
                 # Search the dropdown menu using the house name/number.
-                house_no_input = Select(driver.find_element(By.TAG_NAME, "select"))
+                house_no_input = Select(driver.find_element(By.TAG_NAME, 
+                                                            "select"))
                 for option in house_no_input.options:
                     if house_no in option.text:
                         house_no_input.select_by_visible_text(option.text)
                         house_no_input.submit()
+
+                        # Find the household waste collection date.
+                        household_element = driver.find_element(By.XPATH, 
+                                                                "//*[contains(text(), 'household')]")
+                        household_date = household_element.find_element(
+                            By.XPATH, 
+                            f"following::td[contains(text(), {datetime.now().year})][1]").text
+                        
+                        # Find the recycling collection date.
+                        recycling_element = driver.find_element(By.XPATH, 
+                                                                "//*[contains(text(), 'recycling')]")
+                        recycling_date = recycling_element.find_element(
+                            By.XPATH, 
+                            f"following::td[contains(text(), {datetime.now().year})][1]").text
+                        return
                 print(f"Bin collection information for {house_no} could not be found.")
         print(f"Bin collection information for {council} could not be found.")
 
