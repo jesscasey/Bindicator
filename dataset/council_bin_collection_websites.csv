@@ -1,13 +1,13 @@
-﻿Authority Name,URL
-Aberdeen City Council,https://integration.aberdeencity.gov.uk/service/Household_Waste_collection_Calendar
+﻿Authority Name,Postcode Input ID, Address Dropdown ID,URL
+Aberdeen City Council,postcode_search,selectProperty,https://integration.aberdeencity.gov.uk/en/AchieveForms/?form_uri=sandbox-publish://AF-Process-c34210a1-9f73-467d-8f09-e5e73076c6cd/AF-Stage403ed302-07c5-407d-aae9-0c8b5b297a00/definition.json&redirectlink=%2Fen&cancelRedirectLink=%2Fen&consentMessage=yes
 Aberdeenshire Council,https://online.aberdeenshire.gov.uk/Apps/Waste-Collections/
-Adur District Council,https://www.adur-worthing.gov.uk/bin-day/
-Amber Valley Borough Council,https://www.ambervalley.gov.uk/rubbish-waste-and-recycling
-Angus Council,https://www.angus.gov.uk/bins_and_recycling/bin_collection_days
-Argyll and Bute Council,https://www.argyll-bute.gov.uk/planning-and-environment/bin-collection
-Arun District Council,http://www.arun.gov.uk/main.cfm?type=REFUSECOLLECTIONSE
-Ashfield District Council,https://www.ashfield.gov.uk/residents/waste-and-recycling/
-Ashford Borough Council,http://www.ashford.gov.uk/waste
+Adur District Council,brlu-address-postcode,,https://www.adur-worthing.gov.uk/bin-day/
+Amber Valley Borough Council,streets,ui-id-1,https://www.ambervalley.gov.uk/rubbish-waste-and-recycling/bin-collection-dates/
+Angus Council,searchString,customerAddress,https://www.angus.gov.uk/bins_and_recycling/bin_collection_days
+Argyll and Bute Council,edit-postcode,,https://www.argyll-bute.gov.uk/planning-and-environment/bin-collection
+Arun District Council,postcode,address,http://www.arun.gov.uk/main.cfm?type=REFUSECOLLECTIONSE
+Ashfield District Council,payload[PAG0001725FBEAC1][PWG0005114FBEAC1][PCL0007076FBEAC1][formtable][C_6838cfbaeac4c][PCF0033654FBEAC1],PCF0033654FBEAC1,https://www.ashfield.gov.uk/environment-health/bins-waste-recycling/bin-calendar/
+Ashford Borough Council,ContentPlaceHolder1_CollectionDayLookup2_TextBox_PostCode,ContentPlaceHolder1_CollectionDayLookup2_DropDownList_Addresses,https://secure.ashford.gov.uk/waste/collectiondaylookup/
 Babergh District Council,http://www.babergh.gov.uk/waste-services/collection-days/
 Barnsley Metropolitan Borough Council,https://www.barnsley.gov.uk/pid524
 Basildon Borough Council,http://www3.basildon.gov.uk/website2/postcodes.nsf/frmMyBasildon?openform
