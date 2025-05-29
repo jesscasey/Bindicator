@@ -11,7 +11,8 @@ bin collection dates.
 - For licencing reasons, Northern Ireland postcodes are not supported. Only
 those in England, Scotland, and Wales are supported at this time.
 - Currently, this application only retrieves household waste and recycling
-collection dates. Please check your council's website for further information.
+collection dates. For further information, such as what time your bin should
+be out by, please check your council's website.
 
 I hope to address these limitations in the future. In the meantime, feel free
 to transform this code to work around these limitations or in any other way you
