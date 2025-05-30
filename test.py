@@ -49,3 +49,4 @@ class TestBindicator(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+    print(unittest.TestResult.failures) # Print which (if any) tests failed
