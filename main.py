@@ -37,11 +37,10 @@ def next_bin_day(postcode, council):
         reader = csv.reader(file)
         for row in reader:
             if council in row[0]:
-                driver.get(row[1])
+                driver.get(row[3])
 
                 # Enter the postcode into the appropriate field.
-                postcode_input = driver.find_element(By.CSS_SELECTOR, 
-                                                     "input[type='text']")
+                postcode_input = driver.find_element(By.ID, row[1])
                 postcode_input.send_keys(postcode)
                 postcode_input.submit()
 
@@ -51,8 +50,7 @@ def next_bin_day(postcode, council):
                 house_no = input("Please enter your house name or number: ")
 
                 # Search the dropdown menu using the house name/number.
-                house_no_input = Select(driver.find_element(By.TAG_NAME, 
-                                                            "select"))
+                house_no_input = Select(driver.find_element(By.ID, row[2]))
                 for option in house_no_input.options:
                     if house_no in option.text:
                         house_no_input.select_by_visible_text(option.text)
