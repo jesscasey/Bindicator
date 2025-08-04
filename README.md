@@ -10,7 +10,7 @@ bin collection dates.
 
 | Functionality                      | Supported councils               |
 | ---------------------------------- | ------------------               |
-| ![](https://geps.dev/progress/100) | ![](https://geps.dev/progress/2) |
+| ![](https://geps.dev/progress/100) | ![](https://geps.dev/progress/4) |
 
 ## Limitations
 

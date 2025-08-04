@@ -1,16 +1,16 @@
 ﻿Authority Name,Postcode Input ID, Address Dropdown ID,URL
 Aberdeen City Council,postcode_search,selectProperty,https://integration.aberdeencity.gov.uk/en/AchieveForms/?form_uri=sandbox-publish://AF-Process-c34210a1-9f73-467d-8f09-e5e73076c6cd/AF-Stage403ed302-07c5-407d-aae9-0c8b5b297a00/definition.json&redirectlink=%2Fen&cancelRedirectLink=%2Fen&consentMessage=yes
 Aberdeenshire Council,https://online.aberdeenshire.gov.uk/Apps/Waste-Collections/
-Adur District Council,brlu-address-postcode,,https://www.adur-worthing.gov.uk/bin-day/
+Adur District Council,brlu-address-postcode,brlu-selected-address,https://www.adur-worthing.gov.uk/bin-day/
 Amber Valley Borough Council,streets,ui-id-1,https://www.ambervalley.gov.uk/rubbish-waste-and-recycling/bin-collection-dates/
 Angus Council,searchString,customerAddress,https://www.angus.gov.uk/bins_and_recycling/bin_collection_days
 Argyll and Bute Council,edit-postcode,,https://www.argyll-bute.gov.uk/planning-and-environment/bin-collection
 Arun District Council,postcode,address,http://www.arun.gov.uk/main.cfm?type=REFUSECOLLECTIONSE
 Ashfield District Council,payload[PAG0001725FBEAC1][PWG0005114FBEAC1][PCL0007076FBEAC1][formtable][C_6838cfbaeac4c][PCF0033654FBEAC1],PCF0033654FBEAC1,https://www.ashfield.gov.uk/environment-health/bins-waste-recycling/bin-calendar/
 Ashford Borough Council,ContentPlaceHolder1_CollectionDayLookup2_TextBox_PostCode,ContentPlaceHolder1_CollectionDayLookup2_DropDownList_Addresses,https://secure.ashford.gov.uk/waste/collectiondaylookup/
-Babergh District Council,http://www.babergh.gov.uk/waste-services/collection-days/
-Barnsley Metropolitan Borough Council,https://www.barnsley.gov.uk/pid524
-Basildon Borough Council,http://www3.basildon.gov.uk/website2/postcodes.nsf/frmMyBasildon?openform
+Babergh District Council,_com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormPortlet_INSTANCE_wlut_ddm_Address94394335_BQMmfWtz_0_en_GB_postcode,_com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormPortlet_INSTANCE_wlut_ddm_Address94394335_BQMmfWtz_0_en_GB_uprn,http://www.babergh.gov.uk/waste-services/collection-days/
+Barnsley Metropolitan Borough Council,personInfo_person1_Postcode,person1-address-results,https://waste.barnsley.gov.uk/ViewCollection/SelectAddress
+Basildon Borough Council,txtPostCode,txtAddress,http://www3.basildon.gov.uk/website2/postcodes.nsf/frmMyBasildon?openform
 Basingstoke and Deane Borough Council,http://www.basingstoke.gov.uk/bincollections
 Bassetlaw District Council,https://www.bassetlaw.gov.uk/recycling-and-waste/bin-collection-days
 Bath and North East Somerset Council,https://www.bathnes.gov.uk/rubbish-and-recycling
@@ -275,7 +275,7 @@ South Norfolk District Council,https://www.southnorfolkandbroadland.gov.uk/rubbi
 South Oxfordshire District Council,https://www.southoxon.gov.uk/waste
 South Ribble Borough Council,http://www.southribble.gov.uk/
 South Staffordshire Council,https://www.sstaffs.gov.uk/bins-recycling/index.cfm
-South Tyneside Council,https://www.southtyneside.gov.uk/article/935/Bins-and-recycling
+South Tyneside Council,BINCOLLECTIONDATES_POSTCODE,BINCOLLECTIONDATES_ADDRESSLIST,https://www.southtyneside.gov.uk/article/1023/Bin-collection-dates
 Spelthorne Borough Council,https://www.spelthorne.gov.uk/rubbish
 Stafford Borough Council,https://www.staffordbc.gov.uk/binday
 Staffordshire Moorlands District Council,https://www.staffsmoorlands.gov.uk/sm/bins
@@ -288,7 +288,7 @@ Stockton-on-Tees Borough Council,https://www.stockton.gov.uk/bins-rubbish-and-re
 Stoke-on-Trent City Council,https://www.stoke.gov.uk/homepage/121/bin_day_calendar_view
 Stratford-on-Avon District Council,https://www.stratford.gov.uk/waste-recycling/help-with-your-collection.cfm
 Stroud District Council,https://www.stroud.gov.uk/environment/bins-rubbish-recycling
-Sunderland City Council,http://www.sunderland.gov.uk/bindays
+Sunderland City Council,ContentPlaceHolder1_tbPostCode_controltext,ContentPlaceHolder1_dd1Addresses,http://www.sunderland.gov.uk/bindays
 Surrey Heath Borough Council,http://www.surreyheath.gov.uk/node/53
 Swale Borough Council,http://www.swale.gov.uk/my-collection-day/
 Swindon Borough Council,http://www.swindon.gov.uk/householdwaste
