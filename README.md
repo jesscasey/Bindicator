@@ -6,6 +6,10 @@ parameters as input from the user, fetches the corresponding local authority's
 website, then uses [Selenium](https://www.selenium.dev/) to retrieve the next
 bin collection dates.
 
+If you like this project, consider leaving me a tip by clicking the button below.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R21KADLN)
+
 ## Progress
 
 | Functionality                      | Supported councils               |
