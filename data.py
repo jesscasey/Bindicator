@@ -7,7 +7,19 @@ from ckanapi import RemoteCKAN
 COUNCIL_DATA_FILE = "dataset/council_bin_collection_websites.csv"
 
 def get_council_data(refresh):
+    """
+    Retrieve council bin collection websites using the data.gov.uk API, then 
+    cache the data for future use.
+    
+    Args:
+        refresh (bool): If True, force-refetch from data.gov.uk. Otherwise, 
+        use the cached file.
+    
+    Returns:
+        str: CSV data as a string, or None if fetch fails.
+    """
     if not refresh and os.path.exists(COUNCIL_DATA_FILE):
+        # Retrieve cached data
         print(f"Loading council data from {COUNCIL_DATA_FILE}...")
         try:
             with open(COUNCIL_DATA_FILE, 'r') as f:
