@@ -3,8 +3,10 @@ from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from ckanapi import RemoteCKAN
 
 driver = webdriver.Chrome()
+ckan = RemoteCKAN('https://data.gov.uk/')
 
 # Return the local authority for the entered postcode.
 def find_council(postcode):
@@ -80,5 +82,7 @@ def next_bin_day(postcode, council):
 
 
 if __name__ == "__main__":
-    postcode = input("Please enter your postcode: ")
-    find_council(postcode)
+    council_websites = ckan.action.package_show(id='local-authority-services')
+    print(council_websites)
+    # postcode = input("Please enter your postcode: ")
+    # find_council(postcode)
